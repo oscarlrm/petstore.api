@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Pet Calls</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Pet Calls</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Pet Calls</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.110s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Create Pet</td>
+<td class="success">2.553s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Delete Pet By ID</td>
+<td class="success">0.444s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Search Pet By ID</td>
+<td class="success">0.639s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Update Pet</td>
+<td class="success">0.474s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+Scenario Outline: Create Pet                                                                                           ?[90m# src/test/resources/features/petCalls.feature:9?[0m
+  ?[32mGiven ?[0m?[32mI want to create a pet with the following data: ?[0m?[32m?[1m11?[0m?[32m, &quot;?[0m?[32m?[1mPaco?[0m?[32m&quot;, ?[0m?[32m?[1m1?[0m?[32m, &quot;?[0m?[32m?[1mDogs?[0m?[32m&quot;, &quot;?[0m?[32m?[1mtestUrl?[0m?[32m&quot;, ?[0m?[32m?[1m0?[0m?[32m, &quot;?[0m?[32m?[1mtestString?[0m?[32m&quot;, &quot;?[0m?[32m?[1mavailable?[0m?[32m&quot;?[0m ?[90m# stepdefinitions.petCalls.iWantToCreateAPetWithTheFollowingDataIdCategory_idTag_id(int,java.lang.String,int,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:22:59 GMT
+Content-Type: application/json
+Content-Length: 140
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    &quot;id&quot;: 11,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;name&quot;: &quot;Paco&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;testUrl&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 0,
+            &quot;name&quot;: &quot;testString&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m&quot;200&quot;?[0m                                                                                        ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+
+Scenario Outline: Search Pet By ID   ?[90m# src/test/resources/features/petCalls.feature:18?[0m
+  ?[32mGiven ?[0m?[32mI want to search a pet by ?[0m?[32m?[1m11?[0m ?[90m# stepdefinitions.petCalls.iWantToSearchAPetById(int)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:22:59 GMT
+Content-Type: application/json
+Content-Length: 140
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    &quot;id&quot;: 11,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;name&quot;: &quot;Paco&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;testUrl&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 0,
+            &quot;name&quot;: &quot;testString&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m&quot;200&quot;?[0m      ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:22:59 GMT
+Content-Type: application/json
+Content-Length: 140
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    &quot;id&quot;: 11,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;name&quot;: &quot;Paco&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;testUrl&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 0,
+            &quot;name&quot;: &quot;testString&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+  ?[32mAnd ?[0m?[32mThe pet name should be ?[0m?[32m?[1m&quot;Paco&quot;?[0m  ?[90m# stepdefinitions.petCalls.thePetNameShouldBe(java.lang.String)?[0m
+
+Scenario Outline: Update Pet                                                                                            ?[90m# src/test/resources/features/petCalls.feature:27?[0m
+  ?[32mGiven ?[0m?[32mI want to update a pet with the following data: ?[0m?[32m?[1m11?[0m?[32m, &quot;?[0m?[32m?[1mBruno?[0m?[32m&quot;, ?[0m?[32m?[1m1?[0m?[32m, &quot;?[0m?[32m?[1mDogs?[0m?[32m&quot;, &quot;?[0m?[32m?[1mtestUrl?[0m?[32m&quot;, ?[0m?[32m?[1m0?[0m?[32m, &quot;?[0m?[32m?[1mtestString?[0m?[32m&quot;, &quot;?[0m?[32m?[1mavailable?[0m?[32m&quot;?[0m ?[90m# stepdefinitions.petCalls.iWantToUpdateAPetWithTheFollowingDataIdCategory_idTag_id(int,java.lang.String,int,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:23:00 GMT
+Content-Type: application/json
+Content-Length: 141
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    &quot;id&quot;: 11,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;name&quot;: &quot;Bruno&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;testUrl&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 0,
+            &quot;name&quot;: &quot;testString&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m&quot;200&quot;?[0m                                                                                         ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:23:00 GMT
+Content-Type: application/json
+Content-Length: 141
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    &quot;id&quot;: 11,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;name&quot;: &quot;Bruno&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;testUrl&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 0,
+            &quot;name&quot;: &quot;testString&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+  ?[32mAnd ?[0m?[32mThe pet name should be ?[0m?[32m?[1m&quot;Bruno&quot;?[0m                                                                                    ?[90m# stepdefinitions.petCalls.thePetNameShouldBe(java.lang.String)?[0m
+
+Scenario Outline: Delete Pet By ID   ?[90m# src/test/resources/features/petCalls.feature:35?[0m
+  ?[32mGiven ?[0m?[32mI want to delete a pet by ?[0m?[32m?[1m11?[0m ?[90m# stepdefinitions.petCalls.iWantToDeleteAPetById(int)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:23:00 GMT
+Content-Type: application/json
+Content-Length: 11
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+Pet deleted
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m&quot;200&quot;?[0m      ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 28 feb. 2024 15:23:06</p>
+</div>
+</div>
+</body>
+</html>

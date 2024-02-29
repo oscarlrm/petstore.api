@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Pet Calls" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-02-28T20:22:56" hostname="oriano-m" time="4.11">
+  <properties/>
+  <testcase name="Create Pet" classname="Pet Calls" time="2.553"/>
+  <testcase name="Search Pet By ID" classname="Pet Calls" time="0.639"/>
+  <testcase name="Update Pet" classname="Pet Calls" time="0.474"/>
+  <testcase name="Delete Pet By ID" classname="Pet Calls" time="0.444"/>
+  <system-out><![CDATA[
+Scenario Outline: Create Pet                                                                                           ?[90m# src/test/resources/features/petCalls.feature:9?[0m
+  ?[32mGiven ?[0m?[32mI want to create a pet with the following data: ?[0m?[32m?[1m11?[0m?[32m, "?[0m?[32m?[1mPaco?[0m?[32m", ?[0m?[32m?[1m1?[0m?[32m, "?[0m?[32m?[1mDogs?[0m?[32m", "?[0m?[32m?[1mtestUrl?[0m?[32m", ?[0m?[32m?[1m0?[0m?[32m, "?[0m?[32m?[1mtestString?[0m?[32m", "?[0m?[32m?[1mavailable?[0m?[32m"?[0m ?[90m# stepdefinitions.petCalls.iWantToCreateAPetWithTheFollowingDataIdCategory_idTag_id(int,java.lang.String,int,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:22:59 GMT
+Content-Type: application/json
+Content-Length: 140
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    "id": 11,
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "name": "Paco",
+    "photoUrls": [
+        "testUrl"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "testString"
+        }
+    ],
+    "status": "available"
+}
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m"200"?[0m                                                                                        ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+
+Scenario Outline: Search Pet By ID   ?[90m# src/test/resources/features/petCalls.feature:18?[0m
+  ?[32mGiven ?[0m?[32mI want to search a pet by ?[0m?[32m?[1m11?[0m ?[90m# stepdefinitions.petCalls.iWantToSearchAPetById(int)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:22:59 GMT
+Content-Type: application/json
+Content-Length: 140
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    "id": 11,
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "name": "Paco",
+    "photoUrls": [
+        "testUrl"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "testString"
+        }
+    ],
+    "status": "available"
+}
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m"200"?[0m      ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:22:59 GMT
+Content-Type: application/json
+Content-Length: 140
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    "id": 11,
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "name": "Paco",
+    "photoUrls": [
+        "testUrl"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "testString"
+        }
+    ],
+    "status": "available"
+}
+  ?[32mAnd ?[0m?[32mThe pet name should be ?[0m?[32m?[1m"Paco"?[0m  ?[90m# stepdefinitions.petCalls.thePetNameShouldBe(java.lang.String)?[0m
+
+Scenario Outline: Update Pet                                                                                            ?[90m# src/test/resources/features/petCalls.feature:27?[0m
+  ?[32mGiven ?[0m?[32mI want to update a pet with the following data: ?[0m?[32m?[1m11?[0m?[32m, "?[0m?[32m?[1mBruno?[0m?[32m", ?[0m?[32m?[1m1?[0m?[32m, "?[0m?[32m?[1mDogs?[0m?[32m", "?[0m?[32m?[1mtestUrl?[0m?[32m", ?[0m?[32m?[1m0?[0m?[32m, "?[0m?[32m?[1mtestString?[0m?[32m", "?[0m?[32m?[1mavailable?[0m?[32m"?[0m ?[90m# stepdefinitions.petCalls.iWantToUpdateAPetWithTheFollowingDataIdCategory_idTag_id(int,java.lang.String,int,java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:23:00 GMT
+Content-Type: application/json
+Content-Length: 141
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    "id": 11,
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "name": "Bruno",
+    "photoUrls": [
+        "testUrl"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "testString"
+        }
+    ],
+    "status": "available"
+}
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m"200"?[0m                                                                                         ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:23:00 GMT
+Content-Type: application/json
+Content-Length: 141
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+{
+    "id": 11,
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "name": "Bruno",
+    "photoUrls": [
+        "testUrl"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "testString"
+        }
+    ],
+    "status": "available"
+}
+  ?[32mAnd ?[0m?[32mThe pet name should be ?[0m?[32m?[1m"Bruno"?[0m                                                                                    ?[90m# stepdefinitions.petCalls.thePetNameShouldBe(java.lang.String)?[0m
+
+Scenario Outline: Delete Pet By ID   ?[90m# src/test/resources/features/petCalls.feature:35?[0m
+  ?[32mGiven ?[0m?[32mI want to delete a pet by ?[0m?[32m?[1m11?[0m ?[90m# stepdefinitions.petCalls.iWantToDeleteAPetById(int)?[0m
+HTTP/1.1 200 OK
+Date: Wed, 28 Feb 2024 20:23:00 GMT
+Content-Type: application/json
+Content-Length: 11
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Access-Control-Expose-Headers: Content-Disposition
+Server: Jetty(9.4.9.v20180320)
+
+Pet deleted
+Status Code: 200
+  ?[32mThen ?[0m?[32mResponse should be ?[0m?[32m?[1m"200"?[0m      ?[90m# stepdefinitions.petCalls.response_should_be(java.lang.String)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

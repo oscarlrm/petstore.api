@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.062" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="First Call" name="Post Example - Example #1.1" time="0.007">
+<failure/>
+<system-out><![CDATA[
+Given Get call to "/pet/findByStatus?status=available"......................undefined
+Then Response is "200"......................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
