@@ -1,0 +1,12 @@
+- Measure the throughput of each endpoint by gradually increasing the number of concurrent users and monitoring the response time.
+- Analyze how the throughput varies with increasing user load to identify any performance bottlenecks.
+- Measure the response time of each endpoint under different load conditions.
+- Monitor the server resource utilization  to ensure that the server can handle the load efficiently without exceeding its capacity.
+- Conduct stress testing by increasing the load beyond the expected capacity of the server.
+- Evaluate the system's ability to handle sudden increases in load without crashing or experiencing significant performance degradation.
+- Conduct soak testing by maintaining a constant load on each endpoint for an extended period (e.g., several hours).
+- Introduce errors to observe how the system handles them under load.
+- Measure the error rate and analyze error responses to ensure they are handled gracefully without impacting overall system performance.
+- Test the throughput of each endpoint with varying sizes of request payloads.
+- Test the maximum number of concurrent sessions that each endpoint can handle efficiently.
+- Measure the system's performance in terms of response time and throughput as the number of concurrent sessions increases.
