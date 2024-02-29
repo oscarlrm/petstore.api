@@ -1,0 +1,107 @@
+Create Pet Endpoint (POST /pet):
+
+a. Verify that a new pet can be successfully created with valid data.
+
+b. Verify that all fields of the pet can be created with valid data.
+
+c. Verify that the created pet data reflects correctly in the response.
+
+d. Verify that creating a pet with duplicate ID returns an appropriate error message.
+
+e. Verify that creating a pet with invalid data.
+
+f. Verify that creating a pet with special characters in the data fields does not cause any unexpected behavior.
+
+g. Verify that creating a pet with very large values.
+
+h. Verify that creating a pet with empty or null values for fields returns an appropriate error message.
+
+Update Pet Endpoint (PUT /pet):
+
+a. Verify that a pet can be successfully updated with valid data.
+
+b. Verify that all fields of the pet can be updated individually.
+
+c. Verify that the updated pet data reflects correctly in the response.
+
+d. Verify that updating a pet with an existing ID but different data updates the pet correctly.
+
+e. Verify that updating a pet with partial data does not affect the missing fields.
+
+f. Verify that attempting to update a pet with an invalid ID returns an appropriate error message.
+
+g. Verify that attempting to update a pet with invalid data.
+
+h. Verify that attempting to update a pet with a non-existent ID returns an appropriate error message.
+
+i. Verify that attempting to update a pet with unauthorized credentials returns an appropriate error message.
+
+j. Verify that attempting to update a pet with empty or null values for fields returns an appropriate error message.
+
+Find Pet by ID Endpoint (GET /pet/{petId}):
+
+a. Verify that a pet can be successfully retrieved by its ID.
+
+b. Verify that retrieving a pet with a non-existent ID returns an appropriate error message.
+
+c. Verify that retrieving a pet with an invalid ID returns an appropriate error message.
+
+d. Verify that retrieving a pet with unauthorized credentials returns an appropriate error message.
+
+e. Verify that retrieving a pet returns all associated data correctly (e.g., name, category, tags).
+
+f. Verify that retrieving a pet with null or empty ID returns an appropriate error message.
+
+Find Pets by Status Endpoint (GET /pet/findByStatus):
+
+a. Verify that pets can be successfully retrieved by their status (e.g., available, pending, sold).
+
+b. Verify that retrieving pets with an invalid status returns an appropriate error message.
+
+c. Verify that retrieving pets with unauthorized credentials returns an appropriate error message.
+
+d. Verify that retrieving pets by status returns only pets with the specified status.
+
+e. Verify that retrieving pets by status returns pets with all associated data correctly.
+
+Update Pet with Form Data Endpoint (POST /pet/{petId}):
+
+a. Verify that a pet can be successfully updated with form data.
+
+b. Verify that updating a pet with form data correctly updates the specified fields.
+
+c. Verify that updating a pet with form data with invalid ID returns an appropriate error message.
+
+d. Verify that updating a pet with form data with invalid data returns an appropriate error message.
+
+e. Verify that updating a pet with form data with unauthorized credentials returns an appropriate error message.
+
+f. Verify that updating a pet with form data with null or empty values for fields returns an appropriate error message.
+
+Delete Pet Endpoint (DELETE /pet/{petId}):
+
+a. Verify that a pet can be successfully deleted by its ID.
+
+b. Verify that deleting a pet with a non-existent ID returns an appropriate error message.
+
+c. Verify that deleting a pet with an invalid ID returns an appropriate error message.
+
+d. Verify that deleting a pet with unauthorized credentials returns an appropriate error message.
+
+e. Verify that deleting a pet removes all associated data and returns a success message.
+
+f. Verify that deleting a pet with null or empty ID returns an appropriate error message.
+
+Upload Pet Image Endpoint (POST /pet/{petId}/uploadImage):
+
+a. Verify that an image can be successfully uploaded for a pet.
+
+b. Verify that uploading an image for a non-existent pet ID returns an appropriate error message.
+
+c. Verify that uploading an image with invalid data or format returns an appropriate error message.
+
+d. Verify that uploading an image with unauthorized credentials returns an appropriate error message.
+
+e. Verify that uploading an image for a pet with null or empty ID returns an appropriate error message.
+
+f. Verify that uploading an image for a pet results in the image being associated correctly with the pet.
